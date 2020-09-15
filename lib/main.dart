@@ -7,7 +7,7 @@ void main() {
   runApp(new MyApp());
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
-  ));
+  )); //Hide the custom android status bar.
 }
 
 class MyApp extends StatelessWidget {

@@ -4,17 +4,14 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 
 class FindMySign extends StatefulWidget {
   const FindMySign({Key key}) : super(key: key);
-
   @override
   _FindMySignState createState() => _FindMySignState();
 }
 
 class _FindMySignState extends State<FindMySign> {
   String _date = "Your Birthday";
-  bool _visible = false;
-  bool _isButtonDisabled = false;
-  int zodiacDay = 0;
-  int zodiacMonth = 0;
+  bool _visible = false, _isButtonDisabled = false;
+  int zodiacDay = 0, zodiacMonth = 0;
   String _img = "       ";
   _FindMySignState();
   @override
@@ -22,7 +19,9 @@ class _FindMySignState extends State<FindMySign> {
     super.initState();
   }
 
-  getZodiacSign(int day, int month) {
+  String getZodiacSign(int day, int month) {
+    //Function for Calculating Zodiac Sign
+
     if ((month == 1 && day <= 20) || (month == 12 && day >= 22)) {
       return _img = "003-capricorn.png";
     } else if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) {
@@ -81,6 +80,7 @@ class _FindMySignState extends State<FindMySign> {
                       print('confirm $date');
                       _date = ' ${date.day} - ${date.month} - ${date.year}';
                       setState(() {
+                        //Assign the input date to the variable.
                         zodiacDay = date.day;
                         zodiacMonth = date.month;
                       });
@@ -168,6 +168,7 @@ class _FindMySignState extends State<FindMySign> {
                         alignment: Alignment.center,
                         color: Colors.green,
                         child:
+                            // Get Specific Image by Date
                             Image.asset(getZodiacSign(zodiacDay, zodiacMonth)),
                       ),
                       maintainSize: false,

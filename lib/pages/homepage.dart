@@ -1,9 +1,9 @@
 import 'package:HoroscopeApp/components/custom_appbar.dart';
 import 'package:HoroscopeApp/components/custom_bottombar.dart';
 import 'package:flutter/material.dart';
-
+import 'package:admob_flutter/admob_flutter.dart';
 import 'detail_page.dart';
-
+import 'package:HoroscopeApp/services/admob_service.dart';
 import '../model/horoscope.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,7 +17,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List horoscopes;
-
+  final ams = AdMobService(); //Admob Service
   @override
   void initState() {
     horoscopes = getHoroscopes();
@@ -87,7 +87,18 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: CustomAppBar(title: 'HOROSCOPE', height: 55.0),
-      body: makeBody,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          AdmobBanner(
+              adUnitId: ams.getBannedAdId(),
+              adSize: AdmobBannerSize.FULL_BANNER),
+          Expanded(child: makeBody),
+          AdmobBanner(
+              adUnitId: ams.getBannedAdId2(),
+              adSize: AdmobBannerSize.FULL_BANNER),
+        ],
+      ),
       bottomNavigationBar: CustomBottomBar(),
     );
   }
