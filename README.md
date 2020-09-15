@@ -1,7 +1,11 @@
 # Flutter Horoscope App
 
 I used Flutter for this project. This application gives information about horoscopes and includes a form to calculate your horoscope.
+<<<<<<< HEAD
 You can also see codes for list and card widget.Also included is the admob banner.
+=======
+You can also see codes for list and card widget.
+>>>>>>> a6a32d27e67f486ae8beb6471aba5e72fdb0fa3d
 
 
 
@@ -24,7 +28,11 @@ You can also see codes for list and card widget.Also included is the admob banne
 
 
 <p align="center">    
+<<<<<<< HEAD
     <img src="https://i.hizliresim.com/M1nnCu.png" width="300" height="500" alt="Homepage with admob banner"/>
+=======
+    <img src="https://i.hizliresim.com/ov4o5f.png" width="300" height="500" alt="Homepage"/>
+>>>>>>> a6a32d27e67f486ae8beb6471aba5e72fdb0fa3d
     <img src="https://i.hizliresim.com/KPsvyb.png" width="300" height="500" alt="Detailpage"/>
     <img src="https://i.hizliresim.com/7j5jYj.png" width="300" height="500" alt="FindMySignPage"/>
 </p>
