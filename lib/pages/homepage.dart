@@ -95,7 +95,7 @@ class _HomePageState extends State<HomePage> {
               adSize: AdmobBannerSize.FULL_BANNER),
           Expanded(child: makeBody),
           AdmobBanner(
-              adUnitId: ams.getBannedAdId()(),
+              adUnitId: ams.getBannedAdId(),
               adSize: AdmobBannerSize.FULL_BANNER),
         ],
       ),
