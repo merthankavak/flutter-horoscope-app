@@ -25,7 +25,7 @@ class _FindMySignState extends State<FindMySign> {
     if ((month == 1 && day <= 20) || (month == 12 && day >= 22)) {
       return _img = "003-capricorn.png";
     } else if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) {
-      return _img = "011-aquaris.png";
+      return _img = "011-aquarius.png";
     } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
       return _img = "009-pisces.png";
     } else if ((month == 3 && day >= 21) || (month == 4 && day <= 20)) {
