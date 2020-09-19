@@ -31,7 +31,7 @@ dependencies:
   font_awesome_flutter: 
   flutter_datetime_picker: ^1.4.0
   admob_flutter: "^0.3.4"
-
+  change_app_package_name: ^0.1.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
